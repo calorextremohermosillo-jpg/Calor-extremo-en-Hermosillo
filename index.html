@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Calor Extremo en Hermosillo</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/5d3e5e6e05.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* --- Header --- */
+    header {
+      background: url("mira-mar.jpg") no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.55);
+    }
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+    header h1 { font-size: 2.8em; }
+
+    /* --- Navegación --- */
+    nav {
+      background: #1d3557;
+      padding: 12px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f1faee;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover { color: #f77f00; }
+
+    /* --- Secciones --- */
+    section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section:nth-child(even) { background: #f8f9fa; }
+    section h2 {
+      color: #e63946;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 2em;
+    }
+
+    /* --- Tarjetas --- */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards;
+    }
+    .cards .card:nth-child(1) { animation-delay: 0.1s; }
+    .cards .card:nth-child(2) { animation-delay: 0.3s; }
+    .cards .card:nth-child(3) { animation-delay: 0.5s; }
+    .cards .card:nth-child(4) { animation-delay: 0.7s; }
+    .cards .card:nth-child(5) { animation-delay: 0.9s; }
+    .card:hover { transform: translateY(-5px); }
+    .card i { font-size: 2em; color: #f77f00; margin-bottom: 10px; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Imagen en soluciones --- */
+    .soluciones-img {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .soluciones-img img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .soluciones-img img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    /* --- Redes sociales --- */
+    .redes-sociales { text-align: center; margin-top: 20px; }
+    .social {
+      margin: 0 15px;
+      font-size: 3em;
+      transition: transform 0.3s, filter 0.3s;
+      display: inline-block;
+    }
+    .social.facebook { color: #1877f2; }
+    .social.instagram { color: #e1306c; }
+    .social.whatsapp { color: #25D366; }
+    .social:hover { transform: scale(1.2); filter: brightness(1.2); }
+
+    /* --- Footer --- */
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    /* --- Media Queries --- */
+    @media (max-width: 900px) {
+      .cards { flex-direction: column; align-items: center; }
+      header { padding: 70px 15px; }
+      header h1 { font-size: 2.2em; }
+      section h2 { font-size: 1.8em; }
+    }
+
+    @media (max-width: 600px) {
+      .social { font-size: 2.5em; margin: 0 10px; }
+      header { padding: 50px 10px; }
+      header h1 { font-size: 1.8em; }
+      section { padding: 40px 15px; }
+      section h2 { font-size: 1.5em; }
+      .card { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Proyecto: Calor Extremo en Hermosillo</h1>
+  <p>Conciencia y soluciones frente a las altas temperaturas</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#proyecto">Sobre el Proyecto</a>
+  <a href="#resultados">Resultados</a>
+  <a href="#soluciones">Soluciones</a>
+  <a href="#equipo">Equipo</a>
+  <a href="#contacto">Contacto</a>
+  <a href="#conclusion">Conclusión</a>
+</nav>
+
+<section id="inicio">
+  <h2><i class="fas fa-sun"></i> Inicio</h2>
+  <p>Bienvenidos a la página oficial de nuestro proyecto sobre el calor extremo en Hermosillo.  
+  Vivimos en una de las ciudades más calurosas del mundo, donde las temperaturas alcanzan hasta 51°C en verano.  
+  Nuestro objetivo es informar, sensibilizar y proponer soluciones para proteger la salud y mejorar la calidad de vida de la población.</p>
+</section>
+
+<section id="proyecto">
+  <h2><i class="fas fa-book-open"></i> Sobre el Proyecto</h2>
+  <p>Este proyecto surge de la necesidad de analizar cómo el calor extremo afecta a los habitantes de Hermosillo en su vida diaria.  
+  Nos enfocamos en tres aspectos principales:</p>
+  <div class="cards">
+    <div class="card"><i class="fas fa-heartbeat"></i><h3>Salud</h3><p>Golpes de calor, deshidratación y riesgos en niños y adultos mayores.</p></div>
+    <div class="card"><i class="fas fa-coins"></i><h3>Economía</h3><p>Altos gastos de electricidad y agua, reducción en productividad laboral.</p></div>
+    <div class="card"><i class="fas fa-tree"></i><h3>Urbanismo</h3><p>Falta de sombra, áreas verdes insuficientes e infraestructura vulnerable.</p></div>
+  </div>
+</section>
+
+<section id="resultados">
+  <h2><i class="fas fa-chart-bar"></i> Resultados</h2>
+  <p style="text-align:center;">Estos son algunos de los resultados más relevantes de nuestras encuestas y análisis:</p>
+  <p style="text-align:center;">Se observó que el 45% de la población se ve muy afectada por las altas temperaturas, mientras que el 30% se ve algo afectada. Un 15% está poco afectado y solo un 10% no se ve afectado significativamente.</p>
+</section>
+
+<section id="soluciones">
+  <h2><i class="fas fa-lightbulb"></i> Soluciones</h2>
+  
+  <div class="soluciones-img">
+    <img src="Arboles-en-Casa.jpg" alt="Soluciones al calor extremo: Árboles en Casa">
+  </div>
+
+  <p style="text-align:center;">Acciones viables propuestas para reducir el impacto del calor extremo:</p>
+  <div class="cards">
+    <div class="card"><i class="fas fa-clinic-medical"></i><h3>Refugios climáticos</h3><p>Espacios públicos con sombra, agua y aire acondicionado.</p></div>
+    <div class="card"><i class="fas fa-tint"></i><h3>Campañas de hidratación</h3><p>Distribución de agua y educación preventiva.</p></div>
+    <div class="card"><i class="fas fa-leaf"></i><h3>Reforestación</h3><p>Corredores verdes y más árboles en espacios urbanos.</p></div>
+    <div class="card"><i class="fas fa-bolt"></i><h3>Tecnología eficiente</h3><p>Incentivos para reducir consumo de energía en hogares.</p></div>
+  </div>
+
+
+<div class="card"><i class="fas fa-bolt"></i><h3>Tabla de actividades</h3><p></p></div>
+  </div>
+
+  <div class="soluciones-img">
+    <img src="Tabla-de-actividades.jpg" alt="Tabla de actividades del proyecto">
+  </div>
+
+<div class="card"><i class="fas fa-bolt"></i><h3>Diagrama de Gantt</h3><p></p></div>
+  </div>
+  <div class="soluciones-img">
+    <img src="Diagrama-de-Gantt.jpg" alt="Diagrama de Gantt del proyecto">
+  </div>
+
+
+<div class="card"><i class="fas fa-bolt"></i><h3>Metas</h3><p></p></div>
+  </div>
+  <p style="text-align:center;">El proyecto Calor Extremo en Hermosillo busca implementar medidas sostenibles y colaborativas para reducir el impacto del calor extremo, trabajando con autoridades, organizaciones civiles, instituciones educativas y voluntarios.</p>
+
+  <div class="soluciones-img">
+    <img src="Metas.jpg" alt="Metas del proyecto">
+  </div>
+</section>
+
+<section id="equipo">
+  <h2><i class="fas fa-users"></i> Equipo de Trabajo</h2>
+  <div class="cards">
+    <div class="card"><i class="fas fa-search"></i><h3>Investigadores</h3><p>Recolectaron datos sobre salud, clima y urbanismo.</p></div>
+    <div class="card"><i class="fas fa-poll"></i><h3>Encuestadores</h3><p>Aplicaron cuestionarios a la población.</p></div>
+    <div class="card"><i class="fas fa-paint-brush"></i><h3>Diseñadores</h3><p>Comunicación visual y digital.</p></div>
+    <div class="card"><i class="fas fa-hard-hat"></i><h3>Ingenieros</h3><p>Analizaron viabilidad e infraestructura.</p></div>
+  </div>
+</section>
+
+<section id="conclusion">
+  <h2><i class="fas fa-flag-checkered"></i> Conclusión</h2>
+  <p style="text-align:center; margin-top:20px; font-size:1.1em; max-width:800px; margin-left:auto; margin-right:auto;">
+    En conclusión, podemos ver que el calor en Hermosillo ha sido un problema grave durante años, afectando la salud, la economía y la calidad de vida.  
+    La implementación de áreas verdes, techos y muros verdes, reforestación urbana y tecnologías sostenibles permitirá una ciudad más resiliente y habitable para las futuras generaciones.
+  </p>
+</section>
+
+<section id="contacto">
+  <h2><i class="fas fa-envelope"></i> Contacto</h2>
+  <p style="text-align:center; font-size:1.1em; margin-top:20px;">
+    <i class="fas fa-envelope" style="color:#e63946;"></i>
+    Escríbenos a: 
+    <a href="mailto:calorextremo.hermosillo@gmail.com"><strong>calorextremo.hermosillo@gmail.com</strong></a>
+  </p>
+  <p style="text-align:center; font-size:1.1em; margin-top:10px;">
+    <i class="fas fa-phone-alt" style="color:#f77f00;"></i>
+    Llámanos al: <strong>+52 662 157 6586</strong>
+  </p>
+
+  <div class="redes-sociales">
+    <a href="https://www.facebook.com/tu_pagina" target="_blank" class="social facebook"><i class="fab fa-facebook-square"></i></a>
+    <a href="https://www.instagram.com/tu_pagina" target="_blank" class="social instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/526621576586" target="_blank" class="social whatsapp"><i class="fab fa-whatsapp-square"></i></a>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Proyecto Calor Extremo en Hermosillo. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
